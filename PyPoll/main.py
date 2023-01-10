@@ -1,20 +1,20 @@
 
-# Importing modules important for the analysis
+# Import modules important for analysis
 import os
 import csv
-# Set relative path for csv file
+# Set path for csv file
 data_path = os.path.join('Resources', "election_data.csv")
 
-# A list to hold the names of candidates
+# List to hold names of candidates
 candidates = []
 
-# A list to hold the number of votes each candidate receives
+# List to hold number of votes each candidate receives
 num_votes = []
 
-# A list to hold the percentage of total votes each candidates
+# List to hold percentage of total votes each candidates
 percent_votes = []
 
-# A counter for the total number of votes
+# Count for total number of votes
 total_votes = 0
 
 # Read csv file
@@ -59,20 +59,20 @@ print("--------------------------")
 # Exporting to text file
 
 
-output_file = os.path.join('Analysis', 'pyPoll_output.txt')
+output_file = os.path.join('Analysis', 'PyPoll_Analysis.txt')
 
-pyPolloutput = open(output_file, "w")
+PyPoll_Analysis = open(output_file, "w")
 
 line1 = "Election Results"
 line2 = "--------------------------"
 line3 = str(f"Total Votes: {str(total_votes)}")
 line4 = str("--------------------------")
-pyPolloutput.write('{}\n{}\n{}\n{}\n'.format(line1, line2, line3, line4))
+PyPoll_Analysis.write('{}\n{}\n{}\n{}\n'.format(line1, line2, line3, line4))
 for i in range(len(candidates)):
     line = str(
         f"{candidates[i]}: {str(percent_votes[i])} ({str(num_votes[i])})")
-    pyPolloutput.write('{}\n'.format(line))
+    PyPoll_Analysis.write('{}\n'.format(line))
 line5 = "--------------------------"
 line6 = str(f"Winner: {winning_candidate}")
 line7 = "--------------------------"
-pyPolloutput.write('{}\n{}\n{}\n'.format(line5, line6, line7))
+PyPoll_Analysis.write('{}\n{}\n{}\n'.format(line5, line6, line7))
