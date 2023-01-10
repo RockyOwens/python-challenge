@@ -1,26 +1,26 @@
-# Importing modules important for the analysis
+# Import modulesfor the analysis
 import os
 import csv
-# Set relative path for csv file
+# Path for csv file
 
 data_path=os.path.join('Resources', 'budget_data.csv')
 
-# counter for the total number of months
+# Count total number of months
 total_months = 0
 
-# A counter for the total profit and loss
+# Count total profit and loss
 total_profit_loss = 0
 
-# A counter for the output value of total profit and loss
+# Count output value of total profit and loss
 value = 0
 
-# A counter for the output value of total profit and loss
+# Count output value of total profit and loss
 change = 0
 
-# A list to hold the dates of the financial records
+# List to hold the dates of the financial records
 dates = []
 
-# A list to hold the profits/loss
+# List to hold the profits/loss
 profits = []
 
 # Read csv file
@@ -33,11 +33,11 @@ with open(data_path, newline="") as budget_file:
 
     first_row = next(csvreader)
 
-    # Add total month counter
+    # Add total month count
 
     total_months += 1
 
-    # Add profit and loss counter
+    # Add profit and loss count
 
     total_profit_loss += int(first_row[1])
     value = int(first_row[1])
@@ -55,7 +55,7 @@ with open(data_path, newline="") as budget_file:
         # Total number of months
         total_months += 1
 
-        # The net total amount of profit/ losses over the entire period
+        # Net total amount of profit/ losses over the entire period
 
         total_profit_loss = total_profit_loss + int(row[1])
 
@@ -85,10 +85,10 @@ print(printoutput)
 
 # Exporting to text file
 
-output_file = os.path.join('Analysis', 'pyBank_output.txt')
+output_file = os.path.join('Analysis', 'PyBank_Analysis.txt')
 
 
-pyBankoutput = open(output_file, "w")
+PyBank_Analysis = open(output_file, "w")
 
 line1 = "Financial Analysis"
 line2 = "------------------------------------------"
@@ -99,5 +99,5 @@ line6 = str(
     f"Greatest Increase in Profits: {greatest__inc_date} (${str(greatest_increase)})")
 line7 = str(
     f"Greatest Decrease in Profits: {greatest__dec_date} (${str(greatest_decrease)})")
-pyBankoutput.write('{}\n{}\n{}\n{}\n{}\n{}\n{}\n'.format(
+PyBank_Analysis.write('{}\n{}\n{}\n{}\n{}\n{}\n{}\n'.format(
     line1, line2, line3, line4, line5, line6, line7))
