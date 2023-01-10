@@ -76,3 +76,6 @@ line5 = "--------------------------"
 line6 = str(f"Winner: {winning_candidate}")
 line7 = "--------------------------"
 PyPoll_Analysis.write('{}\n{}\n{}\n'.format(line5, line6, line7))
+
+
+# This code is written for Module Challenge Three of the Data Analytics Bootcamp taught through Rice University
