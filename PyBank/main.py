@@ -1,4 +1,4 @@
-# Import modules for the analysis
+# Import modules for analysis
 import os
 import csv
 # Path for csv file
