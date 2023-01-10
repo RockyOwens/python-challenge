@@ -6,6 +6,8 @@ Both tasks present a real-world situation where your newly developed Python scri
 
 
 PyBank Instructions
+
+
 Create a new repository for this project called python-challenge. Do not add this homework assignment to an existing repository.
 
 Clone the new repository to your computer.
@@ -39,6 +41,8 @@ n addition, your final script should both print the analysis to the terminal and
 
 
 PyPoll Instructions
+
+
 In this Challenge, you are tasked with helping a small, rural town modernize its vote-counting process.
 
 You will be given a set of poll data called election_data.csv. The dataset is composed of three columns: "Voter ID", "County", and "Candidate". Your task is to create a Python script that analyzes the votes and calculates each of the following values:
